@@ -18,6 +18,7 @@
 		BC1C53381A3C82CD00F00FA8 /* FindSeatFlightViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC1C53371A3C82CD00F00FA8 /* FindSeatFlightViewController.m */; };
 		BC723C671A3C9A2A00AD891B /* SelectPreferencesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC723C651A3C9A2A00AD891B /* SelectPreferencesViewController.m */; };
 		BC723C681A3C9A2A00AD891B /* SelectPreferencesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC723C661A3C9A2A00AD891B /* SelectPreferencesViewController.xib */; };
+		BC7F817E1A3CE323005765F8 /* SeatResultViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC7F817D1A3CE323005765F8 /* SeatResultViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,8 @@
 		BC723C641A3C9A2A00AD891B /* SelectPreferencesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelectPreferencesViewController.h; sourceTree = "<group>"; };
 		BC723C651A3C9A2A00AD891B /* SelectPreferencesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelectPreferencesViewController.m; sourceTree = "<group>"; };
 		BC723C661A3C9A2A00AD891B /* SelectPreferencesViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SelectPreferencesViewController.xib; sourceTree = "<group>"; };
+		BC7F817C1A3CE323005765F8 /* SeatResultViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SeatResultViewController.h; sourceTree = "<group>"; };
+		BC7F817D1A3CE323005765F8 /* SeatResultViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SeatResultViewController.m; sourceTree = "<group>"; };
 		DEB0BE2C47170F9B6C0D4545 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC6DE467154129B90147F29C /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		F6A7D8A193645F187E3A1511 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
@@ -126,6 +129,8 @@
 				BC723C641A3C9A2A00AD891B /* SelectPreferencesViewController.h */,
 				BC723C651A3C9A2A00AD891B /* SelectPreferencesViewController.m */,
 				BC723C661A3C9A2A00AD891B /* SelectPreferencesViewController.xib */,
+				BC7F817C1A3CE323005765F8 /* SeatResultViewController.h */,
+				BC7F817D1A3CE323005765F8 /* SeatResultViewController.m */,
 			);
 			path = RateYourSeat;
 			sourceTree = "<group>";
@@ -294,6 +299,7 @@
 			files = (
 				BC1C53381A3C82CD00F00FA8 /* FindSeatFlightViewController.m in Sources */,
 				BC1C53191A3C7F3C00F00FA8 /* ViewController.m in Sources */,
+				BC7F817E1A3CE323005765F8 /* SeatResultViewController.m in Sources */,
 				BC1C53161A3C7F3C00F00FA8 /* AppDelegate.m in Sources */,
 				BC1C53131A3C7F3C00F00FA8 /* main.m in Sources */,
 				BC723C671A3C9A2A00AD891B /* SelectPreferencesViewController.m in Sources */,

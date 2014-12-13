@@ -9,8 +9,16 @@
 #import <UIKit/UIKit.h>
 
 @interface SelectPreferencesViewController : UIViewController
-@property (strong, nonatomic) IBOutlet UITextField *preferenceTextField;
+
+@property (strong, nonatomic) IBOutlet UILabel *preferenceText;
+@property (strong, nonatomic) IBOutlet UIButton *noButton;
+@property (strong, nonatomic) IBOutlet UIButton *yesButton;
+@property (strong, nonatomic) IBOutlet UIImageView *backgoundImage;
+
 - (IBAction)importantClicked:(id)sender;
 - (IBAction)ignoreClicked:(id)sender;
+
+@property (strong, nonatomic) NSMutableArray *preferences;
+@property (nonatomic) int currentPreferenceNr;
 
 @end

@@ -12,5 +12,6 @@
 @property (strong, nonatomic) IBOutlet UITextField *flightNumber;
 @property (strong, nonatomic) IBOutlet UIDatePicker *flightDate;
 - (IBAction)next:(id)sender;
+@property (strong, nonatomic) IBOutlet UIButton *nextButton;
 
 @end

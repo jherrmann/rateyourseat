@@ -8,6 +8,7 @@
 
 #import "FindSeatFlightViewController.h"
 #import "AFNetworking.h"
+#import "SelectPreferencesViewController.h"
 
 @interface FindSeatFlightViewController ()
 
@@ -18,6 +19,13 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    _nextButton.layer.borderWidth=1.0f;
+    _nextButton.layer.borderColor=[[UIColor whiteColor] CGColor];
+}
+
+-(void)viewWillAppear:(BOOL)animated {
+    [self.navigationController setNavigationBarHidden:NO animated:animated];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -49,7 +57,14 @@
      */
     
     // go to selected preferences View
-    [self performSegueWithIdentifier:@"selectPreferences" sender:self];
+//    SelectPreferencesViewController* preferenceView =
+//    [[SelectPreferencesViewController alloc] initWithNibName:@"SelectPreferencesViewController" bundle:nil];
+//    [self.view addSubview:preferenceView.view];
+    
+    SelectPreferencesViewController* preferenceView = [[SelectPreferencesViewController alloc] init];
+    [self.navigationController pushViewController:preferenceView animated:YES];
+    //[self presentViewController:preferenceView animated:YES completion:nil];
+    // to get pack here, tutorial here https://www.youtube.com/watch?v=z6Oey-_yArI&src_vid=xSAaLyltE2s&feature=iv&annotation_id=annotation_2164320797
 }
 
 
