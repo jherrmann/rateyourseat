@@ -22,6 +22,8 @@
     
     _nextButton.layer.borderWidth=1.0f;
     _nextButton.layer.borderColor=[[UIColor whiteColor] CGColor];
+    _flightnrTextfield.layer.borderWidth=1.0f;
+    _flightnrTextfield.layer.borderColor=[[UIColor whiteColor] CGColor];
 }
 
 -(void)viewWillAppear:(BOOL)animated {

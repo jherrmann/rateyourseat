@@ -43,6 +43,9 @@
                                 <variation key="widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="47" y="287" width="178" height="20"/>
                                 </variation>
+                                <connections>
+                                    <segue destination="Af2-Yr-xYR" kind="show" id="b3k-qX-ZV5"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Let's find the perfect seat for you" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hgV-oa-GbS">
                                 <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
@@ -90,6 +93,177 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="886.5" y="144"/>
+        </scene>
+        <!--Rate Seat View Controller-->
+        <scene sceneID="co9-ft-ecu">
+            <objects>
+                <viewController id="Af2-Yr-xYR" customClass="RateSeatViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="usc-nP-DHZ"/>
+                        <viewControllerLayoutGuide type="bottom" id="nF0-LS-Pqz"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="pQe-7s-6Mc">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Gradient_BGR" translatesAutoresizingMaskIntoConstraints="NO" id="c9i-QC-PFz">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                </variation>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CuU-ig-eWD">
+                                <rect key="frame" x="15" y="517" width="140" height="35"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="18"/>
+                                <state key="normal" title="No">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="15" y="513" width="140" height="35"/>
+                                </variation>
+                                <connections>
+                                    <action selector="noClicked:" destination="Af2-Yr-xYR" eventType="touchUpInside" id="yfh-mg-qEp"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v6T-8Z-d97">
+                                <rect key="frame" x="163" y="517" width="140" height="35"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="18"/>
+                                <state key="normal" title="Yes">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="163" y="513" width="140" height="35"/>
+                                </variation>
+                                <connections>
+                                    <action selector="yesClicked:" destination="Af2-Yr-xYR" eventType="touchUpInside" id="ubt-fD-rfR"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Are you afraid of flying?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kU0-ph-8uR">
+                                <rect key="frame" x="8" y="101" width="304" height="67"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="24"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="8" y="97" width="304" height="67"/>
+                                </variation>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="c9i-QC-PFz"/>
+                                <exclude reference="CuU-ig-eWD"/>
+                                <exclude reference="v6T-8Z-d97"/>
+                                <exclude reference="kU0-ph-8uR"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="c9i-QC-PFz"/>
+                                <include reference="CuU-ig-eWD"/>
+                                <include reference="v6T-8Z-d97"/>
+                                <include reference="kU0-ph-8uR"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="backgroundImage" destination="c9i-QC-PFz" id="tyS-13-JI5"/>
+                        <outlet property="noButton" destination="CuU-ig-eWD" id="ZXs-R6-qK8"/>
+                        <outlet property="questionLabel" destination="kU0-ph-8uR" id="NKv-i6-l3q"/>
+                        <outlet property="yesButton" destination="v6T-8Z-d97" id="XE9-z6-BTP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NaN-6k-rHX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1546.5" y="857"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="zMX-wY-fR8">
+            <objects>
+                <viewController storyboardIdentifier="thankyou" id="Zb6-3G-XzU" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Vvb-U2-6Oh"/>
+                        <viewControllerLayoutGuide type="bottom" id="j2s-4H-UYo"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8RY-DB-sad">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Gradient_BGR" translatesAutoresizingMaskIntoConstraints="NO" id="9KQ-N8-ska">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                </variation>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Thank you very much" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IlU-jf-dn4">
+                                <rect key="frame" x="8" y="101" width="304" height="67"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="24"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="8" y="99" width="304" height="67"/>
+                                </variation>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="for telling us about your experience!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="puK-df-Ays">
+                                <rect key="frame" x="8" y="101" width="304" height="67"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="76" y="207" width="169" height="67"/>
+                                </variation>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="We constantly working on improving our service." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sCZ-vf-7QS">
+                                <rect key="frame" x="8" y="101" width="304" height="67"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="38" y="302" width="244" height="67"/>
+                                </variation>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wkR-xN-UQV">
+                                <rect key="frame" x="163" y="517" width="140" height="35"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="18"/>
+                                <state key="normal" title="Home">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="90" y="492" width="140" height="35"/>
+                                </variation>
+                                <connections>
+                                    <action selector="yesClicked:" destination="Af2-Yr-xYR" eventType="touchUpInside" id="vR6-w9-34n"/>
+                                    <segue destination="2Of-He-QHl" kind="show" id="3qG-EP-wmb"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="9KQ-N8-ska"/>
+                                <exclude reference="IlU-jf-dn4"/>
+                                <exclude reference="puK-df-Ays"/>
+                                <exclude reference="sCZ-vf-7QS"/>
+                                <exclude reference="wkR-xN-UQV"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="9KQ-N8-ska"/>
+                                <include reference="IlU-jf-dn4"/>
+                                <include reference="puK-df-Ays"/>
+                                <include reference="sCZ-vf-7QS"/>
+                                <include reference="wkR-xN-UQV"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4lU-jy-HiS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2140.5" y="857"/>
         </scene>
         <!--Find Seat-->
         <scene sceneID="T7S-b2-eBQ">
@@ -200,8 +374,10 @@
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
+                        <outlet property="datePicker" destination="TCT-ud-CjX" id="To3-0A-y3p"/>
                         <outlet property="flightDate" destination="TCT-ud-CjX" id="dL1-7V-aiG"/>
                         <outlet property="flightNumber" destination="zkJ-2b-gz4" id="rIx-Dr-hmH"/>
+                        <outlet property="flightnrTextfield" destination="zkJ-2b-gz4" id="5L1-9Z-nQW"/>
                         <outlet property="nextButton" destination="LtA-Dh-HMZ" id="5fq-NH-UCc"/>
                     </connections>
                 </viewController>
@@ -218,6 +394,7 @@
                         <viewControllerLayoutGuide type="bottom" id="OgK-MX-yUG"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="mIT-aR-mlL">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Gradient_BGR" translatesAutoresizingMaskIntoConstraints="NO" id="Z1L-8C-pRo">
@@ -241,46 +418,78 @@
                                     <action selector="next:" destination="pp2-il-MCZ" eventType="touchUpInside" id="Apv-MY-qAg"/>
                                 </connections>
                             </button>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="8Jy-d3-MEE">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="udK-RN-6Y8">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="seatResultCell" id="Vdn-G0-wrX">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Vdn-G0-wrX" id="bLS-vz-tVp">
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                </prototypes>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="0.0" y="62" width="320" height="210"/>
+                                    <rect key="frame" x="0.0" y="62" width="320" height="200"/>
                                 </variation>
-                                <connections>
-                                    <outlet property="dataSource" destination="s2B-VW-5Tt" id="fUq-8c-wRh"/>
-                                    <outlet property="delegate" destination="s2B-VW-5Tt" id="13f-mc-HEz"/>
-                                </connections>
-                            </tableView>
+                            </scrollView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Have you chosen your seat?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FPi-x3-MgC">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="16" y="434" width="288" height="21"/>
+                                </variation>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="We found the following seats for you" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uoL-mb-Hws">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="16" y="270" width="288" height="21"/>
+                                </variation>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="23D" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hMW-eJ-l8l">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="78" y="307" width="42" height="21"/>
+                                </variation>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="13A" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8yc-nu-iz1">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="16" y="307" width="42" height="21"/>
+                                </variation>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="Z1L-8C-pRo"/>
                                 <exclude reference="4o8-XA-Hsu"/>
-                                <exclude reference="8Jy-d3-MEE"/>
+                                <exclude reference="udK-RN-6Y8"/>
+                                <exclude reference="FPi-x3-MgC"/>
+                                <exclude reference="uoL-mb-Hws"/>
+                                <exclude reference="hMW-eJ-l8l"/>
+                                <exclude reference="8yc-nu-iz1"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
                                 <include reference="Z1L-8C-pRo"/>
                                 <include reference="4o8-XA-Hsu"/>
-                                <include reference="8Jy-d3-MEE"/>
+                                <include reference="udK-RN-6Y8"/>
+                                <include reference="FPi-x3-MgC"/>
+                                <include reference="uoL-mb-Hws"/>
+                                <include reference="hMW-eJ-l8l"/>
+                                <include reference="8yc-nu-iz1"/>
                             </mask>
                         </variation>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
                         <outlet property="bookNowButton" destination="4o8-XA-Hsu" id="D6x-IS-mrN"/>
+                        <outlet property="scrollView" destination="udK-RN-6Y8" id="Qmr-22-35T"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wm5-Mw-MOT" userLabel="First Responder" sceneMemberID="firstResponder"/>

@@ -1,0 +1,75 @@
+{
+  "aircraftType": "321",
+  "row": [
+    {
+      "rowNumber": "1",
+      "column": [
+        {
+          "column": "A",
+          "rating": "5",
+          "additionInfo": "quite zone"
+        },
+        {
+          "column": "B",
+          "rating": "3",
+          "additionInfo": ""
+        },
+        {
+          "column": "C",
+          "rating": "1",
+          "additionInfo": ""
+        },
+        {
+          "column": "D",
+          "rating": "0",
+          "additionInfo": "quite zone"
+        },
+        {
+          "column": "E",
+          "rating": "0",
+          "additionInfo": ""
+        },
+        {
+          "column": "F",
+          "rating": "0",
+          "additionInfo": ""
+        }
+      ]
+    },
+    {
+      "rowNumber": "2",
+      "column": [
+        {
+          "column": "A",
+          "rating": "5",
+          "additionInfo": "quite zone"
+        },
+        {
+          "column": "B",
+          "rating": "3",
+          "additionInfo": ""
+        },
+        {
+          "column": "C",
+          "rating": "1",
+          "additionInfo": ""
+        },
+        {
+          "column": "D",
+          "rating": "0",
+          "additionInfo": "quite zone"
+        },
+        {
+          "column": "E",
+          "rating": "0",
+          "additionInfo": ""
+        },
+        {
+          "column": "F",
+          "rating": "0",
+          "additionInfo": ""
+        }
+      ]
+    }
+  ]
+}

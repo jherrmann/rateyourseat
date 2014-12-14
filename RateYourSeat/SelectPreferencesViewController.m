@@ -31,7 +31,7 @@
     
     NSMutableDictionary *anxiety= [[NSMutableDictionary alloc] initWithDictionary:@{@"text": @"Do you have flight anxiety?", @"choice": @YES, @"background": @"Find_your_seat_anxiety_bgr"}];
 
-    NSMutableDictionary *bathroom= [[NSMutableDictionary alloc] initWithDictionary:@{@"text": @"Do you want to have a bathroom close by?", @"choice": @YES, @"background": @"Find_your_seat_bathroom_bgr"}];
+    NSMutableDictionary *bathroom= [[NSMutableDictionary alloc] initWithDictionary:@{@"text": @"Do you want to have a lavatory close by?", @"choice": @YES, @"background": @"Find_your_seat_bathroom_bgr"}];
     
     NSMutableDictionary *hurry= [[NSMutableDictionary alloc] initWithDictionary:@{@"text": @"Do you need to deboard quickly?", @"choice": @YES, @"background": @"Find_your_seat_hurry_bgr"}];
     

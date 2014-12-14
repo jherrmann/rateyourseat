@@ -7,6 +7,7 @@
 //
 
 #import "SeatResultViewController.h"
+#import "SingleSeatView.h"
 
 @interface SeatResultViewController ()
 
@@ -20,6 +21,15 @@
     
     _bookNowButton.layer.borderWidth=1.0f;
     _bookNowButton.layer.borderColor=[[UIColor whiteColor] CGColor];
+    
+    // parse json dummy
+    NSString *filePath = [[NSBundle mainBundle] pathForResource:@"seats" ofType:@"json"];
+    NSData *data = [NSData dataWithContentsOfFile:filePath];
+    NSDictionary *json = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:nil];
+    NSLog(@"Entry %@", [json objectForKey:@"aircraftType"]);
+    
+    [[self scrollView] setContentSize:CGSizeMake(640, 200)];
+    [self setUpPlaneView];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -41,42 +51,37 @@
     NSLog(@"Boock now deeplink here");
 }
 
-#pragma mark - Table view data source
-
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return 1;
-}
-
-
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 1;
-}
-
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell;
-    //if (indexPath.row == 0) {
-        cell = [tableView dequeueReusableCellWithIdentifier:@"seatResultCell"];
+-(void)setUpPlaneView {
+    CGFloat startX = CGRectGetMidX(self.scrollView.bounds)-100;
+    CGFloat startY = CGRectGetMidY(self.scrollView.bounds)-54;
+            CGFloat newY = startY;
+    for (int row = 0; row < 7; row++) {
 
 
-    //}
     
-    return cell;
-}
+    for (int i = 0; i < 20; i++) {
+        CGFloat newX = startX+25*i;
 
-
-#pragma mark - Table view delegate
-
-- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (indexPath.row == 0) {
-        return 50;
-    } else {
-        return 0;
+        NSLog(@"startX %f", newX);
+        NSLog(@"startY %f", newY);
+        
+        SingleSeatView *seat = [[SingleSeatView alloc] init];
+        //seat.autoresizingMask = UIViewAutoresizingFlexibleBottomMargin|UIViewAutoresizingFlexibleLeftMargin|UIViewAutoresizingFlexibleRightMargin|UIViewAutoresizingFlexibleTopMargin;
+        if (row==2 && i==5) {
+            seat.on = YES;
+        }
+        seat.frame = CGRectMake(newX, newY, 18, 18);
+        [self.scrollView addSubview:seat];
     }
+        if(row == 1 || row == 4 ) {
+            newY = newY + 30;
+        } else {
+            newY = newY + 20;
+        }
+        
 }
 
 
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    //action
 }
 
 @end

@@ -8,9 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SeatResultViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
+@interface SeatResultViewController : UIViewController
 
 @property (strong, nonatomic) IBOutlet UIButton *bookNowButton;
+@property (strong, nonatomic) IBOutlet UIScrollView *scrollView;
 
 - (IBAction)bookNow:(id)sender;
 
