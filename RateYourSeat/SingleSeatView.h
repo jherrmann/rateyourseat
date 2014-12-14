@@ -13,4 +13,6 @@
 @property (nonatomic, assign) BOOL on;
 @property (nonatomic, assign) int rating;
 
+-(void)switchON;
+
 @end

@@ -416,6 +416,7 @@
                                 <connections>
                                     <action selector="bookNow:" destination="s2B-VW-5Tt" eventType="touchUpInside" id="sIP-Vk-0y9"/>
                                     <action selector="next:" destination="pp2-il-MCZ" eventType="touchUpInside" id="Apv-MY-qAg"/>
+                                    <segue destination="2Of-He-QHl" kind="show" id="A4g-BR-ZOh"/>
                                 </connections>
                             </button>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="udK-RN-6Y8">
@@ -443,7 +444,7 @@
                                     <rect key="frame" x="16" y="270" width="288" height="21"/>
                                 </variation>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="23D" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hMW-eJ-l8l">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="20D" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hMW-eJ-l8l">
                                 <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -452,7 +453,7 @@
                                     <rect key="frame" x="78" y="307" width="42" height="21"/>
                                 </variation>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="13A" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8yc-nu-iz1">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="7A" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8yc-nu-iz1">
                                 <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -519,4 +520,7 @@
         <image name="Gradient_BGR" width="320" height="568"/>
         <image name="Start_Screen" width="320" height="568"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="A4g-BR-ZOh"/>
+    </inferredMetricsTieBreakers>
 </document>

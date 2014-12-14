@@ -13,6 +13,7 @@
     CAShapeLayer *_square;
     UITapGestureRecognizer *_tapGestureRecognizer;
     BOOL _hasInitialized;
+    UIColor *lufthansaBlau;
 }
 
 - (void)setFrame:(CGRect)frame
@@ -44,12 +45,12 @@
 -(void)initializeControl
 {
     int radius = self.bounds.size.width / 2;
-    
+    lufthansaBlau = [UIColor colorWithRed:0.0/255.0 green:0.0/255.0 blue:102.0/255.0 alpha:1];
     _square = [CAShapeLayer layer];
     _square.path = [self generateCirclePathWithRadius:radius];
     _square.position = CGPointMake(CGRectGetMidX(self.bounds) - radius, CGRectGetMidY(self.bounds) - radius);
-    _square.fillColor = [UIColor redColor].CGColor;
-    _square.strokeColor = [UIColor colorWithRed:0.75 green:0.0 blue:0.0 alpha:1.0].CGColor;
+    _square.fillColor = lufthansaBlau.CGColor;
+    _square.strokeColor = [UIColor colorWithRed:0.0 green:0.0 blue:0.7 alpha:1.0].CGColor;
     _square.lineWidth = self.bounds.size.width * 0.05;
     [self.layer addSublayer:_square];
     
@@ -80,9 +81,14 @@
     }
     else
     {
-        _square.fillColor = [UIColor redColor].CGColor;
-        _square.strokeColor = [UIColor colorWithRed:0.75 green:0.0 blue:0.0 alpha:1.0].CGColor;
+        _square.fillColor = lufthansaBlau.CGColor;
+        _square.strokeColor = [UIColor colorWithRed:0.0 green:0.0 blue:0.7 alpha:1.0].CGColor;
     }
+}
+
+-(void)switchON {
+    _square.fillColor = [UIColor greenColor].CGColor;
+    _square.strokeColor = [UIColor colorWithRed:0.0 green:0.75 blue:0.0 alpha:1.0].CGColor;
 }
 
 /*

@@ -62,15 +62,20 @@
     for (int i = 0; i < 20; i++) {
         CGFloat newX = startX+25*i;
 
-        NSLog(@"startX %f", newX);
-        NSLog(@"startY %f", newY);
+        //NSLog(@"startX %f", newX);
+        //NSLog(@"startY %f", newY);
         
         SingleSeatView *seat = [[SingleSeatView alloc] init];
         //seat.autoresizingMask = UIViewAutoresizingFlexibleBottomMargin|UIViewAutoresizingFlexibleLeftMargin|UIViewAutoresizingFlexibleRightMargin|UIViewAutoresizingFlexibleTopMargin;
-        if (row==2 && i==5) {
-            seat.on = YES;
-        }
+
         seat.frame = CGRectMake(newX, newY, 18, 18);
+        if (row==0 && i==7) {
+            NSLog(@"code reached");
+            [seat switchON];
+        }
+        if (row==3 && i==19) {
+            [seat switchON];
+        }
         [self.scrollView addSubview:seat];
     }
         if(row == 1 || row == 4 ) {
